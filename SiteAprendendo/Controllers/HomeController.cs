@@ -17,6 +17,7 @@ namespace SiteAprendendo.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["email"] = "Teste";
             return View();
         }
 
