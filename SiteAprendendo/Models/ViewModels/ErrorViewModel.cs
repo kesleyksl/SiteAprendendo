@@ -1,6 +1,6 @@
 using System;
 
-namespace SiteAprendendo.Models
+namespace SiteAprendendo.Models.ViewModels
 {
     public class ErrorViewModel
     {
