@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SiteAprendendo.Models;
 using SiteAprendendo.Data;
+using SiteAprendendo.Services;
 
 namespace SiteAprendendo
 {
@@ -40,6 +41,7 @@ namespace SiteAprendendo
             services.AddDbContext<SiteAprendendoContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("SiteAprendendoContext"), BuilderExtensions => BuilderExtensions.MigrationsAssembly("SiteAprendendo")));
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
