@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SiteAprendendo.Models;
 
 namespace SiteAprendendo.Migrations
 {
     [DbContext(typeof(SiteAprendendoContext))]
-    partial class SiteAprendendoContextModelSnapshot : ModelSnapshot
+    [Migration("20190703214356_DepartmentForeignKey2")]
+    partial class DepartmentForeignKey2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
