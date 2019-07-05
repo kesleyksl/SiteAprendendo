@@ -1,4 +1,5 @@
-﻿using SiteAprendendo.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SiteAprendendo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,9 @@ namespace SiteAprendendo.Services
         {
             _context = context;
         }
-        public List<Departament> FindAll()
+        public async Task<List<Departament>> FindAllAsync()
         {
-            return _context.Departament.OrderBy(x => x.Name).ToList();
+            return await _context.Departament.OrderBy(x => x.Name).ToListAsync();
         }
     }
 }
