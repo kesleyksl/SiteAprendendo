@@ -3,25 +3,25 @@ using System;
 
 namespace SiteAprendendo.Models
 {
-    public class SalesRecord
+    public class SallesRecords
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public double Amount { get; set; }
-        public SalesStatus MyProperty { get; set; }
+        public SalesStatus Status { get; set; }
         public Seller Seller { get; set; }
 
-        public SalesRecord()
+        public SallesRecords()
         {
 
         }
 
-        public SalesRecord(int id, DateTime date, double amount, SalesStatus myProperty, Seller seller)
+        public SallesRecords(int id, DateTime date, double amount, SalesStatus status, Seller seller)
         {
             Id = id;
             Date = date;
             Amount = amount;
-            MyProperty = myProperty;
+            Status = status;
             Seller = seller;
         }
     }

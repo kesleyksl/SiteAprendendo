@@ -29,7 +29,7 @@ namespace SiteAprendendo.Models
         public double BaseSalary { get; set; }
         public Departament Departament { get; set; }
         public int DepartamentId { get; set; }
-        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
+        public ICollection<SallesRecords> Sales { get; set; } = new List<SallesRecords>();
 
         public Seller()
         {
@@ -46,11 +46,11 @@ namespace SiteAprendendo.Models
             Departament = departament;
         }
 
-        public void AddSales(SalesRecord sr)
+        public void AddSales(SallesRecords sr)
         {
             Sales.Add(sr);
         }
-        public void RemoveSales(SalesRecord sr)
+        public void RemoveSales(SallesRecords sr)
         {
             Sales.Remove(sr);
         }
